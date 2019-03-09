@@ -2,23 +2,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HeaderComponent } from './header.component';
+import {AppComponent} from './app.component';
+import { RecipeComponent } from './recipe/recipe.component';
+import { ShoppingListComponent } from './shopping-list/shopping-list.component';
+import { RecipeListComponent } from './recipe/recipe-list/recipe-list.component';
+import { DetailsComponent } from './recipe/details/details.component';
+import { RecipeDetailsComponent } from './recipe/recipe-details/recipe-details.component';
+import { RecipeItemComponent } from './recipe/recipe-list/recipe-item/recipe-item.component';
 
-import { AppComponent } from './app.component';
-import { OtherComponent } from './other/other.component';
-import { AnotherComponent } from './other/another.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    OtherComponent,
-    AnotherComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    RecipeComponent,
+    ShoppingListComponent,
+    RecipeListComponent,
+    DetailsComponent,
+    RecipeDetailsComponent,
+    RecipeItemComponent,
+  ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent ]
 })
 export class AppModule { }
