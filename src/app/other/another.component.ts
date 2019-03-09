@@ -7,7 +7,7 @@ import { Component} from '@angular/core';
       another Works!
     </p>
     <hr>
-    <ng
+    
     
   `,
   styles: []
