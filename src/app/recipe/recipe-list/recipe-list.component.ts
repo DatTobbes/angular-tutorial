@@ -9,7 +9,11 @@ import {Recipe} from '../recipe.model';
 export class RecipeListComponent implements OnInit {
   @Output() recipeSelected = new EventEmitter<Recipe>();
 
-  recipe = new Recipe('Dummy', 'dummy', 'http://guides.global/images/guides/global/dummy_web_page.jpg' )
+  recipes :Recipe[] = [
+    new Recipe('Dummy1', 'Dies ist ein dummy', 'http://guides.global/images/guides/global/dummy_web_page.jpg' ),
+    new Recipe('Dummy1', 'Dies ist ein dummy', 'http://guides.global/images/guides/global/dummy_web_page.jpg' )
+  ]
+
   selectedRecipe : Recipe;
 
   constructor() { }
