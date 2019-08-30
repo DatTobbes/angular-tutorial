@@ -1,18 +1,25 @@
-import {Recipe} from "./recipe.model";
-import { Ingredient } from "../shared/ingredient.model";
 import { EventEmitter } from "@angular/core";
 
-export class RecipeService{
-    private recipes: Recipe[] =  [
-        new Recipe('Dummy1', 'Dies ist ein dummy', 'http://guides.global/images/guides/global/dummy_web_page.jpg', 
-                    [new Ingredient("Pommes", 10), new Ingredient("Ketchup",1)] ),
-        new Recipe('Dummy2', 'Dies ist ein dummy', 'http://guides.global/images/guides/global/dummy_web_page.jpg',
-                    [new Ingredient("Pommes", 10), new Ingredient("Ketchup",1)] )
-    ];
-    
-    recipeSelected = new EventEmitter<Recipe>();
+import { Recipe } from "./recipe.model";
+import { Ingredient } from "../shared/ingredient.model";
 
-    getRecipes() {
-          return this.recipes;
-    }    
+export class RecipeService {
+  private recipes: Recipe[] = [
+    new Recipe(
+      'Schnitzel',
+      'Sehr lecker',
+      'http://kmetro.restaurantden.com/wp-content/uploads/sites/67/2016/03/dish_1.jpg',
+      [
+        new Ingredient('Pommes', 10),
+        new Ingredient('Schnitzel', 1),
+      ]
+    ),
+    new Recipe('Salat', 'Auch lecker?', 'http://www.about.ch/culture/food/salat.jpg', []),
+  ];
+
+  recipeSelected = new EventEmitter<Recipe>();
+
+  getRecipes() {
+    return this.recipes;
+  }
 }
