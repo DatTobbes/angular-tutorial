@@ -1,5 +1,3 @@
-import { EventEmitter } from "@angular/core";
-
 import { Recipe } from "./recipe.model";
 import { Ingredient } from "../shared/ingredient.model";
 
@@ -17,9 +15,15 @@ export class RecipeService {
     new Recipe('Salat', 'Auch lecker?', 'http://www.about.ch/culture/food/salat.jpg', []),
   ];
 
-  recipeSelected = new EventEmitter<Recipe>();
-
   getRecipes() {
     return this.recipes;
+  }
+
+  getRecipe(id: number) {
+    return this.recipes[id];
+  }
+
+  deleteRecipe(id: number) {
+    this.recipes.splice(id, 1);
   }
 }
